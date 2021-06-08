@@ -156,7 +156,7 @@ main(int argc, char ** argv)
 	conn.cb = ubus_connect_handler;
 	ubus_auto_connect(&conn);
 
-	if (nmea_open(device, &stream, B4800) < 0)
+	if (nmea_open(device, &stream, B9600) < 0)
 		return -1;
 
 	uloop_run();
